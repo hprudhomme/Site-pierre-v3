@@ -1,0 +1,100 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html,body { height:100%; }
+
+.navbar{
+    height: 8%;
+}
+
+.logo{
+    position: absolute;
+    height: 200px;
+    left: -2.5%;
+    top: -6%;
+}
+
+.contact{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+
+ul li{
+    list-style: none;
+    margin-top: 7%;
+}
+
+.item-nav{
+    margin-right: 3vh;
+}
+
+.container-home{
+    height: 92%;
+}
+
+.rectangle{
+    position: absolute;
+    top: 20%;
+    right: 13.5%;
+    background: #F78154;
+    width: 50%;
+    height: 60%;
+    z-index: 0;
+    animation: aaa 3s 1;
+}
+
+@keyframes aaa {
+    0%{
+      right: -40%;
+      opacity: 0;
+      background: #D3D57C;
+    }50%{
+        right: 26%;
+        opacity: 50%;
+    }100%{
+      right: 13.5%;
+      opacity: 100%;
+    }
+  }
+
+.under-rec{
+    position: absolute;
+    top: 80%;
+    left: 36.5%;
+    animation: c 3s 1;
+}
+
+@keyframes c {
+    0%{
+      opacity: 0;
+    }50%{
+        opacity: 30%;
+      }90%{
+        opacity: 60%;
+      }100%{
+        opacity: 100%;
+      }
+  }
+
+.name{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    font-size: 770%;
+    z-index: 1000;
+    letter-spacing: -5px;
+    animation: b 3s 1;
+}
+
+@keyframes b {
+    0%{
+      left: -40%;
+      opacity: 0;
+    }50%{
+        opacity: 50%;
+    }100%{
+      left: 20%;
+      opacity: 100%;
+    }
+  }
