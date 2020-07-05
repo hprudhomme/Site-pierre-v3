@@ -1,0 +1,63 @@
+// Place all the styles related to the admin_page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-admin{
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.admin-cover{
+    width: 50%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.admin-logo{
+    width: 50%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.new-button{
+    margin: 10px auto;
+    border: none;
+    background: rgb(48, 142, 219);
+    border-radius: 6px;
+    padding: 7px;
+}
+
+.new-button:hover{
+    background: rgb(83, 236, 190);
+    cursor: pointer;
+}
+
+.delete-button{
+    background: none;
+    color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button{
+    color: green;
+    cursor: pointer;
+}
+
+
+
+
+// new
+
+// cover
+
+.btn-edit-cover{
+    margin-left: 50vw;
+}

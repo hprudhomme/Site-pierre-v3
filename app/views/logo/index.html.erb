@@ -1,27 +1,21 @@
-<h1 class="text-center">Logo</h1>
-<h3 class="text-center">Ux Ui Designer/Designer</h3>
-
-
-<% @logos.each_with_index do |logo, k| %>
-  <% if k == 0 %>
-  <div class="d-flex blo bloc" id=<%= "b"+@count.to_s %>>
-  <% end %>
-  <% if k != 0 %>
-  <div class="d-flex bli bloc" id=<%= "b"+@count.to_s %>>
-  <% end %>
-    <div class="left">
-      <%= image_tag("/assets/"+logo.image,  alt: "logo", class: "img") %>
+<div id="fullpage">
+        <% @logos.each_with_index do |logo, k| %>
+          
+          <section class="section" id=<%="s"+k.to_s %> style='background: <%=logo.background%>;'>
+            <div class="container-fluid">
+              <div class="cover-content-section">
+                <div class="cover-content">
+                  <h1><%= logo.title %></h1>
+                  <p class="description"><%= logo.content %></p>
+                </div>
+                <p class"hidden-p"></p>
+              </div>
+              <div class="cover-image-section chair">
+                <div class="image-cover">
+                  <%= image_tag logo.image, class:'buzz' %>
+                </div>
+              </div>             
+            </div>
+          </section>
+        <% end %>
     </div>
-    <div class="right d-flex flex-column justify-content-between">
-      <div class="b">
-            <h3 class="title"><%= logo.title %></h3>
-        <p><%= logo.content %></p>
-      </div>
-      <div class="d-flex b">
-        <%= button_tag "Previous", type: 'button', class: 'btn btn-primary mr-5 previous-button', id:k%>
-        <%= button_tag "Next", type: 'button', class: 'btn btn-primary mr-5 next-button', id:k%>
-      </div>
-    </div>
-  </div>
-  <p class="count"><%= @count += 1 %></p>
-<% end %>

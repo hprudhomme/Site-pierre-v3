@@ -1,48 +1,35 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html,body { height:100%; }
 
-.navbar{
-    height: 8%;
-}
-
-.logo{
-    position: absolute;
-    height: 200px;
-    left: -2.5%;
-    top: -6%;
-}
-
-.contact{
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
-}
-
-ul li{
-    list-style: none;
-    margin-top: 7%;
-}
-
-.item-nav{
-    margin-right: 3vh;
-}
 
 .container-home{
-    height: 92%;
+    height: 94vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rectangle{
-    position: absolute;
-    top: 20%;
-    right: 13.5%;
     background: #F78154;
     width: 50%;
     height: 60%;
     z-index: 0;
-    animation: aaa 3s 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 13rem;
 }
+
+ /* .name::after{
+  content: "Ux Ui Designer/Designer-Graphiste/Optimiste";
+  font-size: 1vw;
+  letter-spacing: 5px;
+  position: absolute;
+  bottom: 0%;
+  left: 3%;
+  opacity: 0.8;
+}  */
 
 @keyframes aaa {
     0%{
@@ -58,12 +45,6 @@ ul li{
     }
   }
 
-.under-rec{
-    position: absolute;
-    top: 80%;
-    left: 36.5%;
-    animation: c 3s 1;
-}
 
 @keyframes c {
     0%{
@@ -78,13 +59,10 @@ ul li{
   }
 
 .name{
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    font-size: 770%;
+    font-size: 6.69vw;
     z-index: 1000;
-    letter-spacing: -5px;
-    animation: b 3s 1;
+    letter-spacing: 3px;
+     /*animation: b 3s 1; */
 }
 
 @keyframes b {
@@ -97,4 +75,28 @@ ul li{
       left: 20%;
       opacity: 100%;
     }
+  }
+
+
+  // text anim
+
+  //name
+  .ml15 {
+    font-weight: 800;
+    font-size: 4vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+    opacity: 0;
+  }
+
+  // content
+
+
+  .txt-rotate{
+    font-size: 1.9vw;
   }

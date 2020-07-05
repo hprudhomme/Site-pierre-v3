@@ -1,0 +1,48 @@
+<h1 class="text-center">Page admin</h1>
+<div class="container-fluid container-admin">
+    <div class="admin-cover">
+        <h3 class="text-center">Cover</h3>
+        <button data-toggle="modal" data-target="#newCoverModal" data-remote="<%= new_cover_path %> #modal-new-fields" class="new-button">Add logo</button>
+        <ul>
+            <% @covers.each do |cover| %>
+                <li class="d-flex mb-3">
+                    <%= cover.title %>
+
+                    <div class="edit-button ml-4" data-toggle="modal" data-target="#myModal<%=cover.id%>" data-remote="<%= edit_cover_path(cover.id) %> #modal-edit-fields"><i class="fas fa-edit"></i></div>
+
+
+                    <%= form_tag cover_path(cover.id), method: "delete", class: 'ml-3' do %>
+                        <%= button_tag type: 'submit', class: "delete-button", id: "" do %>
+                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <% end %>
+                    <% end %>
+                </li>
+                <%= render 'layouts/modal_edit_cover', cover: cover %>
+            <% end %>
+        </ul>
+        <%= render 'layouts/modal_new_cover' %>
+    </div>
+
+    <div class="admin-logo">
+        <h3 class="text-center">Logo</h3>
+        <button data-toggle="modal" data-target="#newLogoModal" data-remote="<%= new_logo_path %> #modal-new-fields" class="new-button">Add logo</button>
+        <ul>
+            <% @logos.each do |logo| %>
+                <li class="d-flex mb-3">
+                    <%= logo.title %>
+
+                    <div class="edit-button ml-4" data-toggle="modal" data-target="#myModal<%=logo.id%>" data-remote="<%= edit_logo_path(logo.id) %> #modal-edit-fields"><i class="fas fa-edit"></i></div>
+
+
+                    <%= form_tag logo_path(logo.id), method: "delete", class: 'ml-3' do %>
+                        <%= button_tag type: 'submit', class: "delete-button", id: "" do %>
+                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <% end %>
+                    <% end %>
+                </li>
+                <%= render 'layouts/modal_edit_logo', logo: logo %>
+            <% end %>
+        </ul>
+        <%= render 'layouts/modal_new_logo' %>
+    </div>
+</div>

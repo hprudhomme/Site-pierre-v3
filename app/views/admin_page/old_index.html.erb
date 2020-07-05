@@ -1,0 +1,39 @@
+
+
+
+
+
+<div id="fullpage">
+<% @covers.each_with_index do |cover, k| %>
+  <section class="section" id=<%="s"+k.to_s %> style='background: <%=cover.background%>;'>
+  <%= form_tag cover_path(cover.id), method: "patch", class: '' do %>
+    <div class="container-fluid">
+      <div class="cover-content-section">
+        <div class="cover-content">
+            <%= text_field_tag :title, cover.title,placeholder: 'Ajouter un titre', class: 'form-control', id: ''%>
+            <%= text_field_tag :content, cover.content, placeholder: 'Ajouter une description', class: 'form-control description', id: 'new-event-categorie'%>
+        </div>
+        <p class"hidden-p"></p>
+      </div>
+      <div class="cover-image-section chair">
+        <div class="image-cover">
+          <%= image_tag cover.image, class:'buzz' %>
+        </div>
+      </div>            
+    </div>
+    <%= submit_tag("Edit", class: "btn btn-primary btn btn-edit-cover", id: "submit-event") %>
+        <% end %>
+  </section>
+<% end %>
+</div>
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+crossorigin="anonymous"
+></script>

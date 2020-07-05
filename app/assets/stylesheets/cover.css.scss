@@ -2,14 +2,307 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.blo-cover{
+/*
+.sec{
     width: 70%;
-    margin: 6em auto 0 auto;
-    max-height: 70%;
+    margin: 0 auto 0 auto;
+    max-height: 65%;
+    display: flex;
+}
+
+.left-c{
+  width: 50%;
+}
+
+.right-c{
+  border: 1px solid green;
+  width: auto;
+  display: flex;
+  align-items:center;
+}
+
+.right-c p{
+    border:1px solid red;
+}
+
+.img-cover{
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid blue;
+}
+
+.b-cover{
+    margin-left: 15%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 1090px) {
+    .blo-cover{
+        display: block;
+    }
+
+    .b-cover{
+        margin-left: 0%;
+        margin: 0 auto 4em auto;
+    }
 }
 
 
-.img-cover{
-    max-width: 100%;
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "montserrat";
+  }
+  body{
+    
+  }
+  .middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .card{
+    cursor: pointer;
+    width: 540px;
+    height: 480px;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+  }
+  .front,.back{
+    width: 100%;
     height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+  }
+  .front img{
+    height: 100%;
+  }
+  .front{
+    transform: perspective(600px) rotateY(0deg);
+  }
+  .back{
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+  }
+  .back-content{
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+  }
+  .sm{
+    margin: 20px 0;
+  }
+  .sm a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #2c3e50;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%
+  }
+  .sm a:hover{
+    background: #2c3e50;
+    color: white;
+  }
+  .card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  .card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+  }
+  
+*/
+
+
+
+
+
+
+
+
+
+
+  // test js page
+
+
+
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+
+  /*
+  .section h1 {
+    font-size: 64px;
+    background: linear-gradient(to left, #87c7df, #648896);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .chair {
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    right: 16%;
+  }
+  
+  .description {
+    width: 50%;
+    margin-left: 5%;
+    font-size: 20px;
+  }
+
+  .description p {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .img-l .chair{
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 14%;
+  }
+
+  .img-l .description{
+    width: 50%;
+    margin-left: 43%;
+    font-size: 20px;
+  }
+  */
+  
+  #s0{
+    color: black;
+  }
+
+  #s1{
+    color: white;
+  }
+
+  #s2{
+  }
+
+  #s3{
+  }
+
+  #s4{
+    color: white;
+  }
+
+
+
+  .section .container-fluid{
+    height: 100%;
+    display: flex;
+  }
+
+  .section .container-fluid .cover-content-section{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .cover-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .cover-content h1{
+    font-family: 'Notable', sans-serif;
+    text-transform: uppercase;
+  }
+
+  .cover-content .description{
+    font-family: 'Playfair Display', serif;
+  }
+
+  .section .container-fluid .cover-image-section{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section .container-fluid .cover-image-section .image-cover{
+    height: 70%;
+    width: 70%;
+  }
+
+
+  @media screen and (max-width: 700px){
+
+    .section .container-fluid{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: #8CABBE;
+    }
+
+    .section .container-fluid .cover-content-section{
+      width: 100%;
+      height: 50%;
+      display: flex;
+    }
+
+    .hidden-p{
+      display: none;
+    }
+  
+    .cover-content{
+      color: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .cover-content .description{
+      width: 50%;
+      padding: 2px;
+      overflow-wrap: break-word;
+    }
+  
+    .section .container-fluid .cover-image-section{
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .section .container-fluid .cover-image-section .image-cover{
+      height: 60%;
+      width: 60%;
+    }
+
+  }
+
+
+.buzz{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+@font-face {
+  font-family: 'Tempo-Regular';
+  src: url('/assets/Tempo-Regular.ttf.eot')
 }

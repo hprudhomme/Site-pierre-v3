@@ -1,27 +1,32 @@
-<h1 class="text-center">Logo</h1>
-<h3 class="text-center">Ux Ui Designer/Designer</h3>
-
-
-<% @covers.each_with_index do |cover, k| %>
-  <% if k == 0 %>
-  <div class="d-flex blo-cover bloc" id=<%= "b"+@count.to_s %>>
-  <% end %>
-  <% if k != 0 %>
-  <div class="d-flex bli bloc" id=<%= "b"+@count.to_s %>>
-  <% end %>
-    <div class="left">
-      <%= image_tag("/assets/"+cover.image,  alt: "cover", class: "img-cover") %>
+    <div id="fullpage">
+        <% @covers.each_with_index do |cover, k| %>
+          
+          <section class="section index-cover" id=<%="s"+k.to_s %> style='background: <%=cover.background%>;'>
+            <div class="container-fluid">
+              <div class="cover-content-section">
+                <div class="cover-content">
+                  <h1><%= cover.title %></h1>
+                  <p class="description"><%= cover.content %></p>
+                </div>
+                <p class"hidden-p"></p>
+              </div>
+              <div class="cover-image-section chair">
+                <div class="image-cover">
+                  <%= image_tag cover.image, class:'buzz' %>
+                </div>
+              </div>             
+            </div>
+          </section>
+        <% end %>
     </div>
-    <div class="right d-flex flex-column justify-content-between">
-      <div class="b">
-            <h3 class="title"><%= cover.title %></h3>
-        <p><%= cover.content %></p>
-      </div>
-      <div class="d-flex b">
-        <%= button_tag "Previous", type: 'button', class: 'btn btn-primary mr-5 previous-button', id:k%>
-        <%= button_tag "Next", type: 'button', class: 'btn btn-primary mr-5 next-button', id:k%>
-      </div>
-    </div>
-  </div>
-  <p class="count"><%= @count += 1 %></p>
-<% end %>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>

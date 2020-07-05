@@ -1,11 +1,30 @@
-<nav class="navbar d-flex justify-content-between">
-  <a class="navbar-brand" href="#">
-    <img src="/app/assets/images/Logo Pierre Redier.png" width="30" height="30" alt="">
-  </a>
-  <ul class="d-flex">
-    <li class="item-nav" id="bla"><%= link_to "Logo", logo_index_path %></li>
-    <li class="item-nav"><%= link_to "Cover", cover_index_path %></li>
-    <li class="item-nav">IdentitéVisuelle</li>
-    <li>Infographie</li>
-  <ul>
-</nav>
+<header>
+      <div class="menu-toggle" id="hamburger">
+          <i class="fas fa-bars"></i>
+      </div>
+      <div class="overlay">
+        <ul>
+          <li>
+            <%= link_to "ACCUEIL", root_path %>
+          </li>
+          <li><a href="" id="nav-item2">ABOUT</a></li>
+          <li><a href="" id="nav-item3">SKILLS</a></li>
+          <li><a href="" id="nav-item4">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="container-navbar container-fluid">
+        <%= link_to root_path do %>
+          <%= image_tag("/assets/Logo-Pierre-Redier-2.png",  alt: "logo", class: "logo") %>
+        <% end %>
+        
+        <nav id="nav">
+          <ul>
+            <li class="item-nav" id="bla"><%= link_to "Logo", logo_index_path %></li>
+            <li class="item-nav"><%= link_to "Cover", cover_index_path %></li>
+            <li class="item-nav"><%= link_to "Admin", secret_page_index_path %></li>
+            <li>Infographie</li>
+          </ul>
+        </nav>
+      </div>
+      
+    </header>

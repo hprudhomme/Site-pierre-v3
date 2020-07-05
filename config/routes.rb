@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   resources :logo
   resources :cover
+
+  get 'secret_page/index'
+  get 'admin_page/index'
 end

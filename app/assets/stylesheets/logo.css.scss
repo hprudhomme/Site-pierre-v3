@@ -16,6 +16,7 @@
 .blo{
     width: 70%;
     margin: 6em auto 0 auto;
+    display: flex;
 }
 
 .bli{
@@ -45,3 +46,38 @@ p{
 .count{
     display: none;
 }
+
+
+@media screen and (min-width: 200px) and (max-width: 1090px) {
+    .blo{
+        width: 70%;
+        margin: 6em auto 0 auto;
+        display: block;
+    }
+
+    .left{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .right{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .title{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    p{
+        width: 100%;
+        margin-top: 10px;
+        text-align: justify;
+    }
+    
+    .b{
+        margin-left: 0%;
+        margin: 0 auto;
+    }
+  }

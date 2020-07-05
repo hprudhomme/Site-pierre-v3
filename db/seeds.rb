@@ -8,16 +8,8 @@
 
 Logo.destroy_all
 
-Logo.create(title: 'Titre1', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'OKOKOK-100.jpg');
-Logo.create(title: 'Titre2', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'MY DIGITAL SCHOOL LOGO.png');
-Logo.create(title: 'Titre3', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'HolyShit.png');
-Logo.create(title: 'Titre4', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'EnjoyEat logo.png');
 
-
-
-
-Cover.create(title: 'Titre1', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'COVER CRANE 1.jpg');
-Cover.create(title: 'Titre2', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'COVER NXN.png');
-Cover.create(title: 'Titre3', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'MAUVAISE IDEE TAMISE SOMBRE 3.jpg');
-Cover.create(title: 'Titre4', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'NIXON MAUVAISE IDEES.jpg');
-Cover.create(title: 'Titre5', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', image:'Onehours3.png');
+Logo.create(title: 'Titre1', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', background:'#FFDF64');
+Logo.create(title: 'Titre2', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', background:'#2C2C54');
+Logo.create(title: 'Titre3', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', background:'#FCAB64');
+Logo.create(title: 'Titre4', content: 'fsdfsd fsdgsdgsdg gsdgdsgsdg gsdgsdgsdg sgsdgsdgsdgsdg sdgsdgsdgdsg gsdgsdgsdgsdgs sgdgsdgsdgsd gsdgsdgsgs', background:'#EFECCA');
