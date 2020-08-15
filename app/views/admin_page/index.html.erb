@@ -2,7 +2,7 @@
 <div class="container-fluid container-admin">
     <div class="admin-cover">
         <h3 class="text-center">Cover</h3>
-        <button data-toggle="modal" data-target="#newCoverModal" data-remote="<%= new_cover_path %> #modal-new-fields" class="new-button">Add logo</button>
+        <button data-toggle="modal" data-target="#newCoverModal" data-remote="<%= new_cover_path %> #modal-new-fields" class="new-button">Add cover</button>
         <ul>
             <% @covers.each do |cover| %>
                 <li class="d-flex mb-3">
@@ -44,5 +44,30 @@
             <% end %>
         </ul>
         <%= render 'layouts/modal_new_logo' %>
+    </div>
+
+    <div class="admin-behance">
+        <h3 class="text-center">behance</h3>
+        <button data-toggle="modal" data-target="#newBehanceModal" data-remote="<%= new_behance_path %> #modal-new-fields" class="new-button">Add behance</button>
+        <ul>
+            <% if @behances != nil %>
+            <% @behances.each do |behance| %>
+                <li class="d-flex mb-3">
+                    <%= behance.title %>
+
+                    <div class="edit-button ml-4" data-toggle="modal" data-target="#myModal<%=behance.id%>" data-remote="<%= edit_behance_path(behance.id) %> #modal-edit-fields"><i class="fas fa-edit"></i></div>
+
+
+                    <%= form_tag behance_path(behance.id), method: "delete", class: 'ml-3' do %>
+                        <%= button_tag type: 'submit', class: "delete-button", id: "" do %>
+                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <% end %>
+                    <% end %>
+                </li>
+                <%= render 'layouts/modal_edit_behance', behance: behance %>
+            <% end %>
+            <% end %>
+        </ul>
+        <%= render 'layouts/modal_new_behance' %>
     </div>
 </div>

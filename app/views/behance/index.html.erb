@@ -1,0 +1,33 @@
+<div id="fullpage">
+<% @behances.each_with_index do |behance, k| %>
+  
+  <section class="section index-cover" id=<%="s"+k.to_s %> style='background: <%=behance.background%>;'>
+    <div class="container-fluid">
+      <div class="cover-content-section">
+        <div class="cover-content">
+          <h1 style='color: <%=behance.color%>;'><%= behance.title %></h1>
+          <p class="description" style='color: <%=behance.color%>;'><%= behance.content %></p>
+          <a id="EnSavoirPlus" class="ESP" href=<%= behance.link %>>En Savoir Plus</a>
+        </div>
+        <p class"hidden-p"></p>
+      </div>
+      <div class="cover-image-section chair">
+        <div class="image-cover">
+          <%= image_tag behance.image, class:'buzz' %>
+        </div>
+      </div>             
+    </div>
+  </section>
+<% end %>
+</div>
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+crossorigin="anonymous"
+></script>

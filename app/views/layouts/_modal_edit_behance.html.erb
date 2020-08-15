@@ -1,0 +1,36 @@
+<div class="modal fade" id="myModal<%=behance.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <%= form_tag behance_path(behance.id), method: "patch", class: '' do %>
+                    <div class="form-group">
+                        <%= label_tag(:q, "Title:") %>
+                        <%= text_field_tag :title, behance.title,placeholder: 'Ajouter un titre', class: 'form-control', id: 'new-event-title'%>
+                    </div>
+
+                    <div class="form-group">
+                        <%= label_tag(:q, "Content:") %>
+                        <%= text_field_tag :content, behance.content, placeholder: 'Ajouter une catégorie', class: 'form-control', id: 'new-event-categorie'%>
+                    </div>
+
+                    <div class="form-group">
+                        <%= color_field_tag :background, behance.background, class: '', id: 'bginput'%>
+                    </div>
+
+                    <div class="form-group">
+                        <%= color_field_tag :color, behance.color, class: '', id: 'bginput'%>
+                    </div>
+
+
+                    <%= submit_tag("Edit", class: "btn btn-primary btn-block", id: "submit-event") %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

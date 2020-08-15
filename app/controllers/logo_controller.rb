@@ -11,7 +11,7 @@ class LogoController < ApplicationController
             @params_logo = params[:logo]
           end
 
-        @logo = Logo.new(title: @params_logo["title"], content: @params_logo["content"], background: @params_logo["background"])
+        @logo = Logo.new(title: @params_logo["title"], content: @params_logo["content"], background: @params_logo["background"], color: @params_logo["color"])
 
         if @logo.save
           @logo.image.attach(@params_logo["image"])
@@ -35,7 +35,7 @@ class LogoController < ApplicationController
     def update     
 
       @logo = Logo.find(params[:id])
-      if @logo.update(title: params[:title], content: params[:content])
+      if @logo.update(title: params[:title], content: params[:content], background: params[:background], color: params[:color])
           redirect_to request.referrer;
       else
         redirect_to request.referrer;

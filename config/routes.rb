@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :logo
   resources :cover
+  resources :behance
 
   get 'secret_page/index'
   get 'admin_page/index'

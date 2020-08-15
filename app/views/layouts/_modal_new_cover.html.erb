@@ -17,11 +17,15 @@
               </div>
 
               <div class="form-group">
-                <%= f.text_field :background, placeholder: 'Choose a background-color', class: 'form-control', id: 'new-event-categorie'%>
+                <%= f.color_field :background, value: "#e66465", class: '', id: 'bginput'%>
               </div>
 
               <div class="form-group">
-                  <%= f.file_field :image %>
+                <%= f.color_field :color, value: "#e66465", class: '', id: 'bginput'%>
+              </div>
+
+              <div class="form-group">
+                  <%= f.file_field :image, id: 'input-files' %>
               </div>
 
               <%= f.submit "Add", class: "btn btn-primary btn-block", id: "submit-event"%>

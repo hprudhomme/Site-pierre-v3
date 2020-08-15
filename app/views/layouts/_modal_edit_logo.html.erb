@@ -1,4 +1,4 @@
-<div class="modal fade" id="myModal<%=logo.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="myModal<%=logo.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -14,8 +14,16 @@
                                         <%= text_field_tag :title, logo.title,placeholder: 'Ajouter un titre', class: 'form-control', id: 'new-event-title'%>
                                     </div>
                                     <div class="form-group">
-                                        <%= label_tag(:q, "Catégorie:") %>
+                                        <%= label_tag(:q, "Content:") %>
                                         <%= text_field_tag :content, logo.content, placeholder: 'Ajouter une catégorie', class: 'form-control', id: 'new-event-categorie'%>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <%= color_field_tag :background, logo.background, class: '', id: 'bginput'%>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <%= color_field_tag :color, logo.color, class: '', id: 'bginput'%>
                                     </div>
 
                                     <%= submit_tag("Edit", class: "btn btn-primary btn-block", id: "submit-event") %>

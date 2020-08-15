@@ -11,7 +11,7 @@
 }
 
 .admin-cover{
-    width: 50%;
+    width: 33.3%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,15 @@
 }
 
 .admin-logo{
-    width: 50%;
+    width: 33.3%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.admin-behance{
+    width: 33.3%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -60,4 +68,8 @@
 
 .btn-edit-cover{
     margin-left: 50vw;
+}
+
+.modal{
+    color: black;
 }
