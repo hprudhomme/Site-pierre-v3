@@ -48,7 +48,10 @@ TweenMax.defaultEase = Linear.easeOut;
 
             
               let links = document.querySelectorAll("a");
-              let enSavoirPlus = document.getElementById("EnSavoirPlus");
+              let logo = document.getElementById('logo');
+
+              logo.style.borderRadius = "50%";
+              logo.style.background = "white";let enSavoirPlus = document.getElementById("EnSavoirPlus");
 
 
               let ii = 0;
@@ -67,7 +70,11 @@ TweenMax.defaultEase = Linear.easeOut;
           else{
 
             let links = document.querySelectorAll("a");
-            let enSavoirPlus = document.getElementById("EnSavoirPlus");
+            let logo = document.getElementById('logo');
+
+            logo.style.borderRadius = "none";
+            logo.style.background = "none";
+
             let ii = 0;
             let ll = links.length;
 
@@ -124,6 +131,10 @@ TweenMax.defaultEase = Linear.easeOut;
   if (isBright(rgbsection0)) {
       let links = document.querySelectorAll("a");
       let enSavoirPlus = document.getElementById("EnSavoirPlus");
+      let logo = document.getElementById('logo');
+
+      logo.style.borderRadius = "50%";
+      logo.style.background = "white";
 
       let ii = 0;
       let ll = links.length;

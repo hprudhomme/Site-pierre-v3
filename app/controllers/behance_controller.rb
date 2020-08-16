@@ -1,6 +1,6 @@
 class BehanceController < ApplicationController
     def index
-        @behances = Behance.all;
+        @behances = Behance.all.sort_by(&:created_at);
         @count = 0;
     end
 
